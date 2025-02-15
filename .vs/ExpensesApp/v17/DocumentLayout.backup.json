@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD901CE4-A873-4829-9507-5032A53B31F7}|ExpensesApp.csproj|c:\\users\\alfre\\source\\repos\\expensesapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD901CE4-A873-4829-9507-5032A53B31F7}|ExpensesApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD901CE4-A873-4829-9507-5032A53B31F7}|ExpensesApp.csproj|c:\\users\\alfre\\source\\repos\\expensesapp\\data\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD901CE4-A873-4829-9507-5032A53B31F7}|ExpensesApp.csproj|solutionrelative:data\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD901CE4-A873-4829-9507-5032A53B31F7}|ExpensesApp.csproj|c:\\users\\alfre\\source\\repos\\expensesapp\\data\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD901CE4-A873-4829-9507-5032A53B31F7}|ExpensesApp.csproj|solutionrelative:data\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 323,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppContext.cs",
+              "DocumentMoniker": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\Data\\AppContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppContext.cs",
+              "ToolTip": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\Data\\AppContext.cs",
+              "RelativeToolTip": "Data\\AppContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAMwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T01:38:50.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\Data\\Expense.cs",
+              "RelativeDocumentMoniker": "Data\\Expense.cs",
+              "ToolTip": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\Data\\Expense.cs",
+              "RelativeToolTip": "Data\\Expense.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA+wBoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T01:37:30.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\alfre\\source\\repos\\ExpensesApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAvwFAAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T14:10:35.271Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
