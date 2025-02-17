@@ -5,22 +5,34 @@ namespace ExpensesApp
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public async static Task Main(string[] args)
         {
-            new Program().Run();
+            try
+            {
+                await new Program().Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error:{ex.Message} {ex.Source}");
+            }
+            
         }
 
-        public void Run()
+        public async Task Run()
         {
+            //AppExContext appExContext = new AppExContext();
+            //appExContext.Database.EnsureCreated();
+
             bool exit = true;
             int option = -1;
             do
             {
                 Console.WriteLine("1 .- New Card.");
-                Console.WriteLine("2 .- New Expense.");
-                Console.WriteLine("3 .- List expenses.");
-                Console.WriteLine("4 .- Export to excel.");
-                Console.WriteLine("5 .- Exit.");
+                Console.WriteLine("2 .- List cards.");
+                Console.WriteLine("3 .- New Expense.");
+                Console.WriteLine("4 .- List expenses.");
+                Console.WriteLine("5 .- Export to excel.");
+                Console.WriteLine("6 .- Exit.");
                 Console.Write("Select a option:");
 
                 bool reslConver = Int32.TryParse(Console.ReadLine(), out option);
@@ -29,18 +41,50 @@ namespace ExpensesApp
                 {
                     switch (option)
                     {
+                        case 1:
+                            await this.NewCard();
+                            break;
                         case 2:
-                            this.NewExpense();
+                            await this.NewCard();
                             break;
                         case 3:
-                            this.ListData();
+                            await this.NewExpense();
+                            break;
+                        case 4:
+                            await this.ListDataExpenses();
+                            break;
+                        case 5:
+                            this.ExportExpensesToExcel();
+                            break;
+                        case 6:
+                            exit = false;
                             break;
                     }
-
-                    exit = !(option == 5);
                 }
 
             } while (exit);
+        }
+
+        private void ExportExpensesToExcel()
+        {
+            throw new NotImplementedException();
+        }
+
+        private async Task NewCard()
+        {
+            Console.WriteLine("--------------------- Form ---------------------");
+            Console.Write("Name:");
+            string? name = Console.ReadLine();
+            Console.Write("Last digits:");
+            string? lastDigits = Console.ReadLine();
+            Console.Write("Description:");
+            string? description = Console.ReadLine();
+            Console.WriteLine("--------------------- Form ---------------------");
+            using (AppExContext appContext = new AppExContext())
+            {
+                appContext.Cards.Add(new Card(name, lastDigits, description));
+                await appContext.SaveChangesAsync();
+            }
         }
 
         public async Task NewExpense()
@@ -70,7 +114,7 @@ namespace ExpensesApp
 
         }
 
-        public void ListData()
+        public async Task ListDataExpenses()
         {
             Console.WriteLine("--------------------- Data ---------------------");
             using (AppExContext appContext = new AppExContext())
@@ -78,7 +122,7 @@ namespace ExpensesApp
                 if (appContext.Expenses.Any())
                 {
                     Console.WriteLine($"Id - Name - Description - Amount");
-                    appContext.Expenses.AsNoTracking().ToList().ForEach(ex => Console.WriteLine($"{ex.Id} - {ex.Name} - {ex.Description} - {ex.Amount}"));
+                    (await appContext.Expenses.AsNoTracking().ToListAsync()).ForEach(ex => Console.WriteLine($"{ex.Id} - {ex.Name} - {ex.Description} - {ex.Amount}"));
                 }
             }
             Console.WriteLine("--------------------- Data ---------------------");
